@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - BERT QA{% endblock %}
+{% block content %}
+  <h1>Question Answering Dashboard</h1>
+
+  <form method="POST" class="card">
+    <label for="passage">📄 Passage:</label>
+    <textarea name="passage" rows="5" placeholder="Paste or type the passage here...">{{ request.form.get("passage", "") }}</textarea>
+
+    <label for="question">❓ Question:</label>
+    <input type="text" name="question" placeholder="Enter your question..." value="{{ request.form.get('question', '') }}" />
+
+    <label for="chunk-size">🧩 Chunk Size:</label>
+    <select name="chunk-size">
+      <option value="200">200</option>
+      <option value="400" selected>400</option>
+      <option value="600">600</option>
+    </select>
+
+    <input type="submit" value="🔍 Get Answer">
+  </form>
+
+  {% if answer %}
+    <div class="card result">
+      <h2>✅ Answer:</h2>
+      <p class="answer-box">{{ answer }}</p>
+
+      <h3>📌 Highlighted Chunks:</h3>
+      {% for chunk in highlighted_chunks %}
+        <div class="highlighted-chunk">
+          {{ chunk }}<br><em>[Answer found in this chunk]</em>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if error %}
+    <div class="error-box">{{ error }}</div>
+  {% endif %}
+{% endblock %}

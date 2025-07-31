@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Home - BERT QA{% endblock %}
+{% block content %}
+
+<div class="card" style="text-align: center;">
+  <h1 style="font-size: 2.5rem; color: #2c3e50;">Welcome to the BERT Question Answering System</h1>
+  <p style="font-size: 1.1rem; margin-top: 1rem;">
+    This intelligent system uses a fine-tuned <strong>BERT-Large</strong> model to extract accurate answers from large passages of text.
+  </p>
+  <a href="{{ url_for('dashboard') }}">
+    <input type="submit" value="Try it Now" style="margin-top: 1.5rem;">
+  </a>
+</div>
+
+<div class="card">
+  <h2>✨ Features</h2>
+  <ul style="line-height: 1.8; font-size: 1.05rem;">
+    <li>🚀 Built on <strong>BERT</strong>, one of the most powerful NLP models</li>
+    <li>📚 Handles long text inputs by intelligent chunking</li>
+    <li>🔍 Displays answers along with context highlighting</li>
+    <li>⚡ Fast, responsive, and easy-to-use web interface</li>
+    <li>💡 Ideal for students, researchers, and developers</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>📌 How to Use</h2>
+  <ol style="line-height: 1.8; font-size: 1.05rem;">
+    <li>Go to the <strong>Dashboard</strong>.</li>
+    <li>Paste a passage (up to a few paragraphs).</li>
+    <li>Enter your question in natural language.</li>
+    <li>Click Submit – and see your answer instantly!</li>
+  </ol>
+</div>
+
+<div class="card" style="background: #e8f0fe;">
+  <h2>🎯 Why Use BERT QA?</h2>
+  <p style="font-size: 1.05rem;">
+    Traditional search highlights entire documents. This app extracts the exact answer from the content, making it ideal for automated customer support, educational tools, or personal learning assistants.
+  </p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}About - BERT QA{% endblock %}
+{% block content %}
+<h1>About This Project</h1>
+
+<p>
+  This web application is a Question Answering (QA) system built using the <strong>BERT-Large</strong> transformer model.
+  It is designed to extract precise answers from a large body of text by understanding the context and structure of natural language.
+</p>
+
+<h2>🔍 Purpose</h2>
+<p>
+  The goal of this project is to demonstrate the power of transformer-based models like BERT in solving real-world natural language processing (NLP) tasks such as reading comprehension and fact extraction.
+</p>
+
+<h2>🧠 Model Used</h2>
+<p>
+  The application uses the <code>bert-large-uncased-whole-word-masking-finetuned-squad</code> model, a version of BERT fine-tuned on the Stanford Question Answering Dataset (SQuAD). This model has been trained to answer questions based on a given context.
+</p>
+
+<h2>⚙️ How It Works</h2>
+<ul>
+  <li>🔹 The user provides a passage and a question.</li>
+  <li>🔹 The passage is divided into smaller chunks to handle long text input limitations.</li>
+  <li>🔹 Each chunk is processed using the BERT QA pipeline to find potential answers.</li>
+  <li>🔹 The most relevant answer is returned, along with highlighted passage chunks where the answer was found.</li>
+</ul>
+
+<h2>🚀 Technologies Used</h2>
+<ul>
+  <li><strong>Flask</strong> – for creating the web application</li>
+  <li><strong>Transformers (Hugging Face)</strong> – to use the pretrained BERT model</li>
+  <li><strong>HTML/CSS</strong> – for building a responsive and clean UI</li>
+</ul>
+
+<h2>💡 Use Cases</h2>
+<ul>
+  <li>📰 Automatically answering questions from articles or research papers</li>
+  <li>📚 Educational tools for students and teachers</li>
+  <li>📑 Customer support systems to find relevant answers from documentation</li>
+</ul>
+
+<h2>📈 Future Enhancements</h2>
+<ul>
+  <li>✅ Support for multilingual question answering</li>
+  <li>✅ Summarization alongside QA for better understanding</li>
+  <li>✅ Integration with document uploads (PDF, DOCX)</li>
+  <li>✅ UI enhancements with charts and visual highlights</li>
+</ul>
+
+<p>
+  This project is a demonstration of how advanced NLP models can be integrated into user-friendly interfaces to solve complex tasks with ease.
+</p>
+
+{% endblock %}
