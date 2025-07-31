@@ -49,3 +49,7 @@ For this project, we're using a specific variant of the BERT model known as "ber
 5. Input Passage and Question: Once the app is running, you can enter a passage of text and a question in the provided input fields.
 
 6. Get the Answer: Click the "Get Answer" button to receive an answer to your question based on the given passage. The app will also highlight the chunks of the passage that contain the answer.
+
+## 🧑‍💻 Author
+   📧 GitHub: @Jyothi96-max
+   📝 Project: bert-question-answering-app
